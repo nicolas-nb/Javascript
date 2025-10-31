@@ -1,7 +1,11 @@
 const produtosModel = require('../models/produtosModel');
-const { produtos } = require('./siteController');
-
 module.exports = {
+    produtos: (req, res) => {
+        res.sendfile('produtos.html', {root : './views'});
+    },
+    camisetas: (req, res) => {
+        res.sendFile('camisetas.html', {root: './views'});
+    },
     formCadastrar (req, res) {
         res.sendFile('formCadastro.html', { root: './views' });
     },
@@ -10,5 +14,4 @@ module.exports = {
         const mensagemCadastro = produtosModel.cadastrar = {id, desc, qnt, valor, nome};
         res.send(`<h1>${mensagemCadastro}</h1>`);
     }
-
 };

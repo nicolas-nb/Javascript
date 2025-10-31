@@ -7,13 +7,19 @@
 </head>
 <body>
     <h1>Formulário de Cadastro de Produto:</h1>
-    <form action="produtos/cadastrar" method="POST">
+    <form action="/produtos/Cadastrar" method="POST">
+        
+        <label for="id">id:</label>
+        <input type="number" id="id" name="id" placeholder="Digite a ID do Produto" required><br>
         <label for="nome">Nome do Produto:</label>
         <input type="text" id="nome" name="nome" placeholder="Digite o Nome do Produto" required><br>
+        
         <label for="descricao">Descrição do Produto:</label>
-        <input type="text" id="des" name="descricao" placeholder="Digite a Descrição do Produto" required><br>  
+        <input type="text" id="des" name="desc" placeholder="Digite a Descrição do Produto" required><br>  
+        
         <label for="quantidade">Quantidade do Produto:</label>
-        <input type="number" id="qnt" name="quantidade" placeholder="Digite a Quantidade do Produto" required><br>
+        <input type="number" id="qnt" name="qnt" placeholder="Digite a Quantidade do Produto" required><br>
+       
         <label for="valor">Valor do Produto:</label>
         <input type="number" id="valor" name="valor" placeholder="Digite o Valor do Produto" required><br>
         <input type="submit" value="Cadastrar Produto">
